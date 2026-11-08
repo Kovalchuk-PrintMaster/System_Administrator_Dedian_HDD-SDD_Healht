@@ -1,0 +1,22 @@
+[Unit]
+Description=Disk health audit (%i)
+After=local-fs.target network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+Group=root
+WorkingDirectory=/opt/forprint-utils/disk-health-audit
+ExecStart=/bin/bash /opt/forprint-utils/disk-health-audit/utils/disk_health_audit.sh %i
+Nice=10
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7
+
+# Логи самого запуску будуть у journalctl,
+# а детальні звіти скрипт сам складає у logs/runs/.
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

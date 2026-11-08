@@ -1,0 +1,11 @@
+[Unit]
+Description=Run disk health audit short weekly
+
+[Timer]
+OnCalendar=Sat *-*-* 14:00:00
+Persistent=true
+RandomizedDelaySec=15m
+Unit=disk-health-audit@short.service
+
+[Install]
+WantedBy=timers.target

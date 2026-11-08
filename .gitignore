@@ -1,0 +1,16 @@
+# Runtime, private credentials and staging (NEVER COMMIT)
+/config/disk-health-audit.env
+/logs/
+/tmp/
+/backups/
+/*.zip
+/*.tar
+/*.tar.gz
+*.log
+*.swp
+__pycache__/
+.pytest_cache/
+.DS_Store
+# Encrypted operator-managed snapshot is stored only under private-backup/.
+/private-backup/*
+!/private-backup/*.gpg

@@ -1,0 +1,8 @@
+{
+  "source_host": "s01.forprint.net.ua",
+  "source_snapshot": "DISK_HEALTH_PRIVATE_FULL_20261108T193152Z.tar.gz",
+  "source_snapshot_sha256": "8ad9e4d21a7498716b6f6cdb98f5edbfd066f781ca1cdf835d29c4f12b44a0f3",
+  "pin_validated": true,
+  "telegram_effective_secret_equivalence": "NOT_VALIDATED_REQUIRES_OPERATOR_REVIEW",
+  "staged_from": "review-sanitized-source-only"
+}
